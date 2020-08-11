@@ -285,21 +285,23 @@ export default class NewChannelModal extends React.PureComponent {
                             id='Tora'
                             type='checkbox'
                             name='channelSources'
+                            value='Tora'
                             aria-labelledby='channelModalSourcesLabel'
                         />
                     </label>
-                    Tora
+                    <div className='form-control'>Tora</div>
                 </div>
                 <div className='checkbox'>
                     <label>
                         <input
                             id='Talmud'
                             type='checkbox'
+                            value='Talmud'
                             name='channelSources'
                             aria-labelledby='channelModalSourcesLabel'
                         />
                     </label>
-                    Talmud
+                    <div className='form-control'>Talmud</div>
                 </div>
             </fieldset>
         )
