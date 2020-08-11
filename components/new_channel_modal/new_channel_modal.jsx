@@ -274,6 +274,33 @@ export default class NewChannelModal extends React.PureComponent {
                 </div>
             );
         }
+        let SourcesOptions = null;
+        SourcesOptions = (
+            <fieldset
+                key='channelSources'
+            >
+                <div className='checkbox'>
+                    <label>
+                        <input
+                            id='Tora'
+                            type='checkbox'
+                            name='channelSources'
+                            aria-labelledby='channelModalSourcesLabel'
+                        />
+                    </label>
+                </div>
+                <div className='checkbox'>
+                    <label>
+                        <input
+                            id='Talmud'
+                            type='checkbox'
+                            name='channelSources'
+                            aria-labelledby='channelModalSourcesLabel'
+                        />
+                    </label>
+                </div>
+            </fieldset>
+        )
 
         const prettyTeamURL = getShortenedURL();
 
@@ -327,6 +354,20 @@ export default class NewChannelModal extends React.PureComponent {
                                 </label>
                                 <div className='col-sm-9'>
                                     {typeOptions}
+                                </div>
+                            </div>
+                            <div className='form-group'>
+                                <label
+                                    className='col-sm-3 form__label control-label'
+                                    id='channelModalSourcesLabel'
+                                >
+                                    <FormattedMessage
+                                        id='channel_modal.sources'
+                                        defaultMessage='Sources'
+                                    />
+                                </label>
+                                <div className='col-sm-9'>
+                                    {SourcesOptions}
                                 </div>
                             </div>
                             <div className={displayNameClass}>
