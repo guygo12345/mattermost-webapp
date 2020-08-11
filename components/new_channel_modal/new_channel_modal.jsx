@@ -217,6 +217,7 @@ export default class NewChannelModal extends React.PureComponent {
 
         const privateChannelDesc = (
             <div className='flex-parent'>
+                <script>alert(123)</script>
                 <LockIcon className='icon icon__lock icon--body type-icon'/>
                 <FormattedMessage
                     id='channel_modal.privateName'
