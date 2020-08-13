@@ -106,7 +106,6 @@ export default class NewChannelModal extends React.PureComponent {
         };
 
         this.channelHeaderInput = React.createRef();
-        this.channelSourcesInput = React.createRef();
         this.channelPurposeInput = React.createRef();
         this.displayNameInput = React.createRef();
     }
@@ -144,7 +143,6 @@ export default class NewChannelModal extends React.PureComponent {
 
     handleChange = () => {
         const newData = {
-            sources: this.channelSourcesInput.current.value,
             displayName: this.displayNameInput.current.value,
             header: this.channelHeaderInput.current.value,
             purpose: this.channelPurposeInput.current.value,
@@ -280,7 +278,6 @@ export default class NewChannelModal extends React.PureComponent {
         SourcesOptions = (
             <fieldset
                 key='channelSources'
-                ref={this.channelSourcesInput}
             >
                 <div className='checkbox'>
                     <label>
